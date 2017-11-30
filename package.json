@@ -1,0 +1,20 @@
+{
+  "name": "plgui",
+  "version": "0.1",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "repository": "https://github.com/eliasvaltteri/plgui",
+  "keywords": [
+    "Electron"
+  ],
+  "author": "eliasvaltteri",
+  "devDependencies": {
+    "electron": "~1.7.8"
+  },
+  "dependencies": {
+    "mongodb": "^2.2.33"
+  }
+}
