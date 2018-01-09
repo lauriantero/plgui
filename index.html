@@ -1,54 +1,61 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css">
-  <link rel="stylesheet" type="text/css" href="css/style.css">
-  <title>Graz public transport stop search</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<title>Graz routes & tips</title>
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css">
+	<link href="assets/narrow-jumbotron.css" rel="stylesheet">
+	<link href="assets/style.css" rel="stylesheet">
 </head>
 <body>
-  <header class="main-header">
-    <h1>Graz public transport stop search</h1>
-    <h3>Together we will find the way!</h3> 
-  </header>
-  <br>
+	<div class="container">
+		<header class="header clearfix">
+			<nav>
+				<ul class="nav nav-pills float-right">
+					<li class="nav-item">
+						<a class="nav-link active" href="#">Home <span class="sr-only">(current)</span></a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#">About</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#">Contact</a>
+					</li>
+				</ul>
+			</nav>
+			<h3 class="text-muted">Graz info</h3>
+		</header>
 
-  <div class="container">
+		<main role="main">
 
-      <!--
-      <form>
-        <div class="form-group">
-          <label>Departure stop</label>
-          <input type="text" class="form-control" placeholder="Your departure stop">
-        </div>
+			<div class="jumbotron" style="background: rgba(250, 112, 0, 0.733)">
+				<h1 class="display-3">Well hello there!</h1>
+				<p class="lead">Here you can find info about bus and tram routes and stops in Graz. You can also look for restaurants.</p>
+				<p><a class="btn btn-lg btn-primary" href="restaurants.html" role="button">Restaurant Search</a></p>
+				<p><a class="btn btn-lg btn-primary" href="routes.html" role="button">Route Search</a></p>
+			</div>
 
-        <div class="form-group">
-          <label>Destination stop</label>
-          <input type="text" class="form-control" placeholder="Your destination">
-        </div>
+			<div class="row marketing">
+				<div class="col-lg-6">
+					<h4>Bus and tram routes</h4>
+					<p>Search for bus stops and connections based on stops' names and geolocations.</p>
+				</div>
 
-        <br>
-        <button type="submit" class="btn btn-default">Search</button>
-      </form>
-    -->
+				<div class="col-lg-6">
+					<h4>Restaurants</h4>
+					<p>Find out about restaurants, pubs, cafes etc. locations in Graz.</p>
+				</div>
+			</div>
 
-    <div id="form">
-      <div id="form-input">
-        <input type="text" name="formname" placeholder="Your departure stop">
-      </div>
-      <div id="form-input">
-        <input type="text" name="formname" placeholder="Your destination">
-      </div>
-      <br>
-      <button type="submit" class="btn btn-search">Search</button>
-    </div>
+		</main>
 
-    <h2 class="route text-center"></h2>
+		<footer class="footer">
+			<p>&copy; sa17_31@tugraz</p>
+		</footer>
 
-  </div>
-
-  <script>
-    require('./renderer.js')
-  </script>
+	</div>
+	<!-- scripts -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script>
 </body>
 </html>
