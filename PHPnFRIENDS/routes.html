@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<title>Graz routes & stuff</title>
+	<link href="assets/style.css" rel="stylesheet">
+</head>
+<body>
+	<!-- wrapper for all content -->
+	<div class="container">
+		<div class="wrapper">
+
+			<!-- navigation -->
+			<header class="header clearfix">
+				<nav>
+					<ul class="nav nav-pills float-right">
+						<li class="nav-item">
+							<a class="nav-link active" href="#">Home</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#">About</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#">Contact</a>
+						</li>
+					</ul>
+				</nav>
+				<h3 class="text-muted pagetitle">Graz routes & stuff</h3>
+				<hr class="hr-thick">
+			</header>
+			<!-- /navigation -->
+
+			<!-- main element -->
+			<main>
+				<!-- main content starts -->
+
+				<!-- single stop search -->
+				<button onclick="toggle('stop-search')" class="btn btn-block btn-toggle first"> > Search for a stop</button>
+				<div id="stop-search" class="row marketing">
+					<div class="col-lg-12">
+						<h3>Search for a stop</h3>
+					</div>
+					<div class="col-lg-12">
+						<form action="searchStop.php">
+							<div class="form-row">
+								<div class="col">
+									<input type="text" name="stopname" class="form-control" placeholder="Stop name">
+								</div>
+								<button type="submit" class="btn btn-primary">Search</button>
+							</div>
+						</form>
+					</div>
+				</div>
+				<!-- /single stop search -->
+
+				<!-- route search -->
+				<button onclick="toggle('route-search')" class="btn btn-block btn-toggle"> > Search for routes</button>
+				<div id="route-search" class="row marketing">
+					<div class="col-lg-12">
+						<h3>Bus and tram routes</h3>
+					</div>
+					<div class="col-lg-12">
+						<form action="searchRoute.php">
+							<div class="form-row">
+								<div class="col">
+									<input type="text" name="dest" class="form-control" placeholder="Destination stop">
+								</div>
+								<div class="col">
+									<input type="text" name="dept" class="form-control" placeholder="Departure stop">
+								</div>
+								<button type="submit" class="btn btn-primary">Search</button>
+							</div>
+						</form>
+					</div>
+				</div>
+				<!-- /routes search -->
+
+				<!-- search stops by coordinates -->
+				<button onclick="toggle('coord-search')" class="btn btn-block btn-toggle"> > Search by coordinates</button>
+				<div id="coord-search" class="row marketing">
+					<div class="col-lg-12">
+						<h3>Stops by coordinates</h3>
+						<div class="col">
+							<small id="formhelp" class="form-text text-muted">
+								Create a bounding square and list stops inside the square.
+							</small>
+						</div>
+						<form>
+							<div class="form-row">
+								<label for="lon1" class="col-sm-2 col-form-label">Point 1</label>
+								<div class="col">
+									<input type="number" name="lon1" class="form-control" id="lon1" placeholder="longtitude">
+								</div>
+								<div class="col">
+									<input type="number" name="lat1" class="form-control" id="lat1" placeholder="latitude">
+								</div>
+							</div>
+							<div class="form-row">
+								<label for="lon2" class="col-sm-2 col-form-label">Point 2</label>
+								<div class="col">
+									<input type="number" name="lon2" class="form-control" id="lon2" placeholder="longtitude">
+								</div>
+								<div class="col">
+									<input type="number" name="lat2" class="form-control" id="lat2" placeholder="latitude">
+								</div>
+							</div>
+							<button type="submit" class="btn btn-primary float-right">Search</button>
+						</form>
+					</div>
+				</div>
+				<!-- /stops by coordinates -->
+
+				<!-- creating routes -->
+				<button id="last-btn" onclick="toggle('create-route')" class="btn btn-block btn-toggle"> > Create new route</button>
+				<div id="create-route" class="row marketing last">
+					<div class="col-lg-12">
+						<h3>Create new route</h3>
+						<div class="col">
+							<small id="formhelp" class="form-text text-muted">
+								Create a a new route between two existing stops. Click + to add intermediate stops.
+							</small>
+						</div>
+						<form>
+							<div id="create-stop-1" class="form-row">
+								<div class="col">
+									<input type="text" class="form-control" placeholder="Departure stop">
+								</div>
+								<div class="col-1">
+									<button onclick="create()" type="button" class="btn btn-secondary btn-block">+</button>
+								</div>
+							</div>
+							<div class="form-row">
+								<div class="col">
+									<input type="text" class="form-control" placeholder="Destination stop">
+								</div>
+							</div>
+							<label class="wrong-input float-left">Check your input!</label>
+							<button type="button" class="btn btn-primary float-right">Create route</button>
+						</form>
+					</div>
+				</div>
+				<!-- /creating routes -->
+				<!-- /main content -->
+			</main>
+			<!-- /main element -->
+
+			<footer class="footer">
+				<hr class="hr-thick">
+				<p>&copy; sa17_31@tugraz</p>
+			</footer>
+		</div>
+	</div>
+	<!-- /wrapper -->
+	<!-- scripts -->
+	<script src="assets/script.js"></script>
+	<script src="assets/map.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script>
+</body>
+</html>
